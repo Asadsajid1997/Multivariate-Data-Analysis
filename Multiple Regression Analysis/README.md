@@ -69,7 +69,8 @@ The three assumptions to be addressed for the individual variables are linearity
 (homoscedasticity), and normality. Please refer to the attached excel sheet and SAS program output for
 the scatter plots and residual plots between dependent variable, independent variables, and residuals.
 
-## Stage 4: In this stage, we will take 4 approaches towards model building starting from simple regression
+## Stage 4: 
+In this stage, we will take 4 approaches towards model building starting from simple regression
 analysis with a single best variable, stepwise regression analysis at alpha = 0.05, a full model multiple
 regression analysis at alpha = 0.05 and using the best subset from stepwise regression, we will introduce
 variable Firm size (X8) to the model.
@@ -107,6 +108,111 @@ other variable can enter the model at alpha = 0.05. Root MSE of this model is 4.
 variance as 9.53.
 
 ![image](https://github.com/Asadsajid1997/Multivariate-Data-Analysis/assets/126636246/5d7cbc2a-092c-41db-b2a0-bfed03d12b95)
+
+The regression variate will be Y = -6.52 + 3.37(X3) + 7.62(X5) +1.40(X6). The coefficients of 3.37, 7.62,
+and 1.4 implies that with 1 unit change in the value of X3, X5, and X6, all else being equal, there will be
+3.37, 7.62, and 1.4 unit change in the value of X9, respectively. P-value of the estimate and the model are
+both satisfactory, while we acknowledge that the X6 is on the borderline. R2 of 0.76 indicates that 76%
+of the variance in the model is being explained by X5, X3 and X6.
+
+
+#  3rd Approach: Full model multiple regression analysis at alpha = 0.05
+Fitting a full multiple regression model to predict X9 based on all the independent variables (except X8)
+gives us the below mentioned stats:
+
+## Model Estimates:
+R2: 0.77; Adj. R2: 0.76; Root MSE: 4.42; Coefficient of variation: 9.59; F value: 45.25; p-value
+corresponding to this F value: <0.0001.
+
+![image](https://github.com/Asadsajid1997/Multivariate-Data-Analysis/assets/126636246/9b049a01-7e2f-4312-ae3a-0c73788098bd)
+
+Regression variate: Y = -10.18 + -0.05(X1) – 0.069(X2) + 3.36(X3) - 0.04(X4) + 8.36(X5) + 1.2(X6) +
+0.56(X7). The respective coefficients of the independent variables imply that with 1 unit change in the
+values of independent variables, all else being equal, there will be unit change in the value of X9 equivalent
+to the coefficients. P-value of the model is satisfactory however there are some estimates whose p-value
+does not satisfy the criteria of 0.05, namely X1, X2, X4, X6, and X7. It is interesting that in stepwise
+regression, X6 was found to be significant by a very low margin, but the inclusion of other variables has
+rendered it unimportant. R2 of 0.77 indicates that 77% of the variance in the model is being explained by
+all the variables in the model.
+
+
+# 4th Approach: Introduction of variable Firm size (X8) to the model created from stepwise regression:
+Introducing X8 to the stepwise multiple regression model to predict X9 gives us the below mentioned
+stats:
+
+## Model Estimates:
+R2: 0.79; Adj. R2: 0.78; Root MSE: 4.17; Coefficient of variation: 9.05; F value: 90.89; p-value
+corresponding to this F value: <0.0001.
+
+![image](https://github.com/Asadsajid1997/Multivariate-Data-Analysis/assets/126636246/3cc8a273-8bbe-4aa1-b367-5984ad0914ca)
+
+
+We have already interpreted the stepwise regression model hence the process is same for this one. One
+thing that needs to be highlighted is that inclusion of Firm size (X8) in the model has increased the Adj.
+R2 to 0.78 from 0.76. Root MSE and coefficient of variance have also improved from the best regression
+we have earlier. It is safe to say that with the inclusion of firm size, this is the best model out of all 4 that
+we tried. Its parsimonious and has the highest Adj. R2. The regression variate here is Y = -16.33 +
+4.24(X3) + 8.05(X5) +1.46(X6) + 3.85(X8). Since X8 is a categorical variable, the interpretation of X8’s
+coefficient will be that with a bigger firm size (X8 = 1), the increase in the X9 would be 3.85 units.
+
+
+# Multiple Regression Assumptions:
+## Linearity: 
+We have checked the scatter plots of every independent variable with the dependent variables.
+While we conclude the assumption of linearity holds for all the variables, we certainly can see that there
+are some variables which are more linear than the others. Examples being X3 and X3, that is the reason
+they have more impact on the model and are the important variables identified in stepwise model. Also,
+the standardized residual plot shows no non-linearity. (Please refer to the attached SAS output)
+
+## Homoscedasticity: 
+The residual plots of all the independent variables does not seem to show any
+homoscedasticity. (Please refer to the attached SAS output)
+
+## Normality: 
+It seems that the condition of Normality is satisfied in the sense that in both the models, full
+and stepwise, residual normal plot is on the diagonal but there are ups and downs in between. So, it would
+be fair to say that it barely satisfies normality. It will be also fair to say that the full model deviates from
+normality standard the most and the stepwise regression model with addition of X8 obeys normality
+standard the most.
+
+## Independence: 
+Since all the plots of the residuals against independent variables are either null plots or
+random plots without any pattern, it is safe to say that this condition is satisfied in all the models.
+
+## Multicollinearity:
+In the step wise regression model, the independent variables chosen (X3, X5, and X6) don’t have this
+effect, as evident by the correlation matrix. However, when we try to fit Firm size (X8) into this model,
+there is some multicollinearity introduced because of a somewhat high correlation between X3 and X8 (-
+0.64). But the model still doesn’t suffer too much because if we observe both the variates of Model 2 and
+Model 4, we see very little difference in the coefficients of X3, X5 and X8. The third model, all variable
+regression model, suffers greatly from multicollinearity because there are multiple variables that are
+correlated to each other and all of them have been used in the model.
+
+
+# SUMMARY:
+The complimentary evaluation of the confirmatory model and the regression results both help answer the
+central research question: What influences product usage? The regression models produce predictions
+with excellent degrees of predictive accuracy. The variation explained is greater than 75%, and the
+predicted error rate for every prediction is about +-5%. These levels, in addition to the results confirming
+model validity, give the greatest degrees of confidence regarding the quality and accuracy of the regression
+models used as the basis for developing business strategies.
+
+All the estimated models yielded results which were substantially identical: there are 2 significant
+variables on product usage - price flexibility(X3) and services (X5) and one considerably less significant
+influence – salesforce image (X6). For instance, based on estimated model 1 point increase in consumer
+perception of variable X5 (services) will produce an increase of at least 8% in using a product. Same goes
+for other 2 variables 1 point improvement in price flexibility and salesforce image will lead to 3.3% and
+1.4% increase in product usage respectively. Additionally variable X8 (Firm Size) has demonstrated
+significant influence on product usage. Usage levels at larger organizations are almost 4% greater than at
+smaller firms. These results provide management a foundation to formulate a plan to increase product
+usage.
+
+Based on the findings to stat that only 3 variables have influence on product usage is an understatement
+rather it is more accurate to think of these variables as representative of the perceptual dimensions.
+Although there is some variation in the normality condition for the full model, but still, all the models do
+satisfy the assumptions of multiple regression. We recommend management to use the 4th approach,
+results of the stepwise regression with variable X8 for the best predictive accuracy.
+
 
 
 
