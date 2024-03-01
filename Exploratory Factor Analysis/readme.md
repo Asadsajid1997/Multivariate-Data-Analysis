@@ -1,16 +1,20 @@
 
 # Introduction:
 
-HATCO (Hair, Anderson, and Tatham company) a large (though nonexistent company) industrial supplier conducted survey of its customer through an established marketing firm and gathered a dataset. The survey
+HATCO (Hair, Anderson, and Tatham company) a large industrial supplier conducted survey of its customer through an established marketing firm and gathered a dataset. The survey
 was focused on attributes identified by HATCO in past which is perceived to be the most influential in
 the choice of suppliers.
-Problem Statement:
+
+# Problem Statement:
+
 1. Understand whether these perceptions can be grouped. By grouping the perceptions, HATCO will
 be able to see the big picture in terms of understanding its customers and what the customers think
 about HATCO.
 2. Reduce the 7 variables to smaller size so that other multivariate technique can be more
 parsimonious.
-Dataset:
+
+# Dataset:
+
 The collected data consist of 100 observations on 7 different variables and is an example of segmentation
 study for a business-to-business situation.
 Each of these variables was measured on a graphic rating scale, where a ten‐centimeter line was drawn
