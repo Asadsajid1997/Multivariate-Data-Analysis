@@ -1,7 +1,7 @@
 
 # Introduction:
 
-HATCO (Hair, Anderson, and Tatham company) a large industrial supplier conducted survey of its customer through an established marketing firm and gathered a dataset. The survey
+HATCO (Hair, Anderson, and Tatham company) a large (though nonexistent company) industrial supplier conducted survey of its customer through an established marketing firm and gathered a dataset. The survey
 was focused on attributes identified by HATCO in past which is perceived to be the most influential in
 the choice of suppliers.
 
